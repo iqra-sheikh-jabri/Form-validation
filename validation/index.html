@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Employee Addition</h2>
+            <p>Corporate - Add Employee</p>
+        </div>
+        <form onsubmit="return myfunction()">
+            <div id="employee-form">
+                <div class="form-group">
+                    <label for="employee-name" id="email-label">Employee Name <span>*</span></label>
+                    <input type="text" id="employee-name" placeholder="Full Name" name="ename">
+                    <span class="form-error" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company <span>*</span></label>
+                    <select id="company" name="company" required>
+                        <option value="" disabled selected>Select Company</option>
+                        <option value="sauda-store">Sauda Store</option>
+                        <option value="cedar-pvt-ltd">Cedar Pvt Ltd</option>
+                        <option value="angro-pvt-ltd">Angro Pvt Ltd</option>
+                        <option value="hassan-sons">Hassan & Sons</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="personal-id">Personal ID <span>*</span></label>
+                    <input type="text" id="personal-id" placeholder="Personal ID" name="personal-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation <span>*</span></label>
+                    <input type="text" id="designation" placeholder="e.g Accountant" name="designation" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username<span>*</span></label>
+                    <input type="text" id="username" placeholder="Username" name="username" required>
+                    <span class="form-error" id="username-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact">Contact # <span>*</span></label>
+                    <input type="text" name="contact" id="contact" value="" placeholder="+92 (Pakistan)">
+                    <span class="form-error" id="contact-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cnic">CNIC # <span>*</span></label>
+                    <input type="text" id="cnic" name="cnic" placeholder="XXXXX-XXXXXXX-X" required
+                        pattern="\d{5}-\d{7}-\d{1}" title="Please enter a valid CNIC in the format XXXXX-XXXXXXX-X">
+                    <span class="form-error" id="cnic-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address<span>*</span></label>
+                    <input type="text" id="address" placeholder="Address" name="address" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
